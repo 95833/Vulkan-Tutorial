@@ -1,0 +1,222 @@
+[
+  {
+    "distance": 2,
+    "command": [
+      "/tmp/vulkan-perspective-check/build/vulkan_lessons",
+      "--lesson",
+      "camera",
+      "--shift",
+      "0",
+      "--output",
+      "/workspace/scratch/78a475aaead6/vulkan_selfstudy/lab/evidence/perspective2.ppm",
+      "--validation"
+    ],
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "pixels": {
+      "width": 512,
+      "height": 512,
+      "rgb_bytes": 786432,
+      "rgb_sha256": "37e4a9e490e05b8a6af3db4136aa7985889ca5d79960382d4e74d120518f2840",
+      "changed_pixels": 59536,
+      "changed_fraction": 0.22711181640625,
+      "unique_colors": 59537,
+      "center_rgb": [
+        127,
+        1,
+        127
+      ],
+      "corner_rgb": [
+        6,
+        9,
+        14
+      ],
+      "bbox": [
+        134,
+        134,
+        377,
+        377
+      ],
+      "centroid": [
+        255.5,
+        255.5
+      ],
+      "most_common": [
+        {
+          "rgb": [
+            6,
+            9,
+            14
+          ],
+          "count": 202608
+        },
+        {
+          "rgb": [
+            255,
+            254,
+            0
+          ],
+          "count": 1
+        },
+        {
+          "rgb": [
+            253,
+            253,
+            2
+          ],
+          "count": 1
+        },
+        {
+          "rgb": [
+            252,
+            252,
+            3
+          ],
+          "count": 1
+        },
+        {
+          "rgb": [
+            251,
+            251,
+            4
+          ],
+          "count": 1
+        },
+        {
+          "rgb": [
+            250,
+            250,
+            5
+          ],
+          "count": 1
+        },
+        {
+          "rgb": [
+            249,
+            249,
+            6
+          ],
+          "count": 1
+        },
+        {
+          "rgb": [
+            248,
+            248,
+            7
+          ],
+          "count": 1
+        }
+      ]
+    }
+  },
+  {
+    "distance": 4,
+    "command": [
+      "/tmp/vulkan-perspective-check/build/vulkan_lessons",
+      "--lesson",
+      "camera",
+      "--shift",
+      "0",
+      "--output",
+      "/workspace/scratch/78a475aaead6/vulkan_selfstudy/lab/evidence/perspective4.ppm",
+      "--validation"
+    ],
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "pixels": {
+      "width": 512,
+      "height": 512,
+      "rgb_bytes": 786432,
+      "rgb_sha256": "9d5813a411dbcb776f8e5f64419f67dde74375c5213d0596bbace59b2462833a",
+      "changed_pixels": 14884,
+      "changed_fraction": 0.0567779541015625,
+      "unique_colors": 14885,
+      "center_rgb": [
+        126,
+        2,
+        126
+      ],
+      "corner_rgb": [
+        6,
+        9,
+        14
+      ],
+      "bbox": [
+        195,
+        195,
+        316,
+        316
+      ],
+      "centroid": [
+        255.5,
+        255.5
+      ],
+      "most_common": [
+        {
+          "rgb": [
+            6,
+            9,
+            14
+          ],
+          "count": 247260
+        },
+        {
+          "rgb": [
+            254,
+            253,
+            1
+          ],
+          "count": 1
+        },
+        {
+          "rgb": [
+            252,
+            251,
+            3
+          ],
+          "count": 1
+        },
+        {
+          "rgb": [
+            250,
+            249,
+            5
+          ],
+          "count": 1
+        },
+        {
+          "rgb": [
+            248,
+            247,
+            7
+          ],
+          "count": 1
+        },
+        {
+          "rgb": [
+            246,
+            245,
+            9
+          ],
+          "count": 1
+        },
+        {
+          "rgb": [
+            244,
+            243,
+            11
+          ],
+          "count": 1
+        },
+        {
+          "rgb": [
+            241,
+            240,
+            14
+          ],
+          "count": 1
+        }
+      ]
+    }
+  }
+]

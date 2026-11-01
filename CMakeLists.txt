@@ -1,0 +1,57 @@
+cmake_minimum_required(VERSION 3.21)
+project(vulkan_selfstudy LANGUAGES CXX)
+
+find_package(Vulkan REQUIRED)
+if(DEFINED Vulkan_VERSION AND Vulkan_VERSION VERSION_LESS 1.3)
+    message(FATAL_ERROR "Vulkan 1.3 or newer headers are required.")
+endif()
+find_program(LAB_GLSLC NAMES glslc HINTS "$ENV{VULKAN_SDK}/Bin" "$ENV{VULKAN_SDK}/bin")
+find_program(LAB_GLSLANG NAMES glslangValidator HINTS "$ENV{VULKAN_SDK}/Bin" "$ENV{VULKAN_SDK}/bin")
+if(NOT LAB_GLSLC AND NOT LAB_GLSLANG)
+    message(FATAL_ERROR "Install glslc or glslangValidator, or set -DLAB_GLSLC=... / -DLAB_GLSLANG=...")
+endif()
+
+set(LAB_SHADER_OUTPUTS)
+foreach(shader triangle.vert vertex.vert camera.vert color.frag texture.vert texture.frag mips.frag layers.frag)
+    set(source "${CMAKE_CURRENT_SOURCE_DIR}/shaders/${shader}")
+    set(output "${CMAKE_CURRENT_BINARY_DIR}/shaders/${shader}.spv")
+    if(LAB_GLSLC)
+        set(compile_command "${LAB_GLSLC}" --target-env=vulkan1.3 "${source}" -o "${output}")
+    else()
+        set(compile_command "${LAB_GLSLANG}" -V --target-env vulkan1.3 "${source}" -o "${output}")
+    endif()
+    add_custom_command(OUTPUT "${output}"
+        COMMAND "${CMAKE_COMMAND}" -E make_directory "${CMAKE_CURRENT_BINARY_DIR}/shaders"
+        COMMAND ${compile_command}
+        DEPENDS "${source}" COMMENT "Compiling ${shader}" VERBATIM)
+    list(APPEND LAB_SHADER_OUTPUTS "${output}")
+endforeach()
+add_custom_target(lab_shaders DEPENDS ${LAB_SHADER_OUTPUTS})
+
+add_executable(vulkan_lessons src/main.cpp src/context.cpp src/resources.cpp src/render.cpp src/lessons.cpp)
+target_compile_features(vulkan_lessons PRIVATE cxx_std_17)
+set_target_properties(vulkan_lessons PROPERTIES CXX_EXTENSIONS OFF)
+target_link_libraries(vulkan_lessons PRIVATE Vulkan::Vulkan)
+target_compile_definitions(vulkan_lessons PRIVATE LAB_SHADER_DIR="${CMAKE_CURRENT_BINARY_DIR}/shaders")
+add_dependencies(vulkan_lessons lab_shaders)
+if(MSVC)
+    target_compile_options(vulkan_lessons PRIVATE /W4 /utf-8)
+else()
+    target_compile_options(vulkan_lessons PRIVATE -Wall -Wextra -Wpedantic -Wno-missing-field-initializers)
+endif()
+
+# CPU像素参考由独立文件实现；没有任何Vulkan API或链接依赖。
+add_executable(cpu_reference extras/cpu_reference.cpp)
+target_compile_features(cpu_reference PRIVATE cxx_std_17)
+set_target_properties(cpu_reference PROPERTIES CXX_EXTENSIONS OFF)
+if(MSVC)
+    target_compile_options(cpu_reference PRIVATE /utf-8)
+endif()
+
+# Make、Ninja、Visual Studio均使用 build/vulkan_lessons[.exe]，避免配置子目录差异。
+foreach(target vulkan_lessons cpu_reference)
+    set_target_properties(${target} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}")
+    foreach(config DEBUG RELEASE RELWITHDEBINFO MINSIZEREL)
+        set_target_properties(${target} PROPERTIES RUNTIME_OUTPUT_DIRECTORY_${config} "${CMAKE_CURRENT_BINARY_DIR}")
+    endforeach()
+endforeach()

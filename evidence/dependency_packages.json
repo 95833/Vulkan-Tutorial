@@ -1,0 +1,92 @@
+[
+  {
+    "package": "cmake",
+    "version": "3.28.3-1build7",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake_3.28.3-1build7_amd64.deb",
+    "sha256": "4b0a7f8c0daf27b26b46997d994ae5d1ee7a3d11dfcda9f7627bb1462c162295"
+  },
+  {
+    "package": "cmake-data",
+    "version": "3.28.3-1build7",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake-data_3.28.3-1build7_all.deb",
+    "sha256": "20a3b644211ce82f35c24f1f5052199adeb0ac159978a8740fd6c0959611557f"
+  },
+  {
+    "package": "libvulkan-dev",
+    "version": "1.3.275.0-1build1",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/v/vulkan-loader/libvulkan-dev_1.3.275.0-1build1_amd64.deb",
+    "sha256": "9577a2c5379372ca8231e700728390fa7d4991a0d8c6484ad83da849c728e76e"
+  },
+  {
+    "package": "glslang-tools",
+    "version": "15.1.0-2~ubuntu0.24.04.2",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/universe/g/glslang/glslang-tools_15.1.0-2~ubuntu0.24.04.2_amd64.deb",
+    "sha256": "8767bba0e4cc781a5de0da3e662f656664cc3b8de2399aef6755bac61137727e"
+  },
+  {
+    "package": "spirv-tools",
+    "version": "2025.1~rc1-1~ubuntu0.24.04.2",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/universe/s/spirv-tools/spirv-tools_2025.1~rc1-1~ubuntu0.24.04.2_amd64.deb",
+    "sha256": "529e396c337d15beb8ed0f03fcbeb2a066e5a818e032e197b6ef2d3328dc7ae9"
+  },
+  {
+    "package": "vulkan-validationlayers",
+    "version": "1.3.275.0-1",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/universe/v/vulkan-validationlayers/vulkan-validationlayers_1.3.275.0-1_amd64.deb",
+    "sha256": "3f5e9b53fbaabe32d770d3608912c04a33b8683385df9a5472fe062c16850746"
+  },
+  {
+    "package": "vulkan-tools",
+    "version": "1.3.275.0+dfsg1-1",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/universe/v/vulkan-tools/vulkan-tools_1.3.275.0+dfsg1-1_amd64.deb",
+    "sha256": "994e429b5a4550b46c5bd9a938af1f60c4aa4890e08f661603b9518a8df824d1"
+  },
+  {
+    "package": "mesa-vulkan-drivers",
+    "version": "25.2.8-0ubuntu0.24.04.4",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa-vulkan-drivers_25.2.8-0ubuntu0.24.04.4_amd64.deb",
+    "sha256": "a4ec58cb952b4e2a8b7c7a9b4ea80fa3d2914e347ad13b11dfb67518b409fb57"
+  },
+  {
+    "package": "librhash0",
+    "version": "1.4.3-3build1",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/r/rhash/librhash0_1.4.3-3build1_amd64.deb",
+    "sha256": "e9ee69963ff1a56378b9c5ffdd21ea0feaec9647c522349b7612b25103490528"
+  },
+  {
+    "package": "libuv1t64",
+    "version": "1.48.0-1.1build1",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/libu/libuv1/libuv1t64_1.48.0-1.1build1_amd64.deb",
+    "sha256": "72a1856b30af1e533494ab90742a2446f4491b15ddebcade6661a6e8d61b4359"
+  },
+  {
+    "package": "libjsoncpp25",
+    "version": "1.9.5-6build1",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/libj/libjsoncpp/libjsoncpp25_1.9.5-6build1_amd64.deb",
+    "sha256": "8efea5b75952f3ad1c40e6b5b31de687c297ea29f87f8b63efebb55e13467211"
+  },
+  {
+    "package": "libllvm20",
+    "version": "1:20.1.2-0ubuntu1~24.04.3",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/l/llvm-toolchain-20/libllvm20_20.1.2-0ubuntu1~24.04.3_amd64.deb",
+    "sha256": "f018e71c72c7a4742fb1aff9dc98b45586f42e6ea464d4918af7e3772b7f0658"
+  },
+  {
+    "package": "libdrm-amdgpu1",
+    "version": "2.4.125-1ubuntu0.1~24.04.2",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/libd/libdrm/libdrm-amdgpu1_2.4.125-1ubuntu0.1~24.04.2_amd64.deb",
+    "sha256": "aa29b7898bae596bf07e55ba178cf8d5ea698fe83688e1b34520d86010251a7a"
+  },
+  {
+    "package": "libdrm2",
+    "version": "2.4.125-1ubuntu0.1~24.04.2",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/libd/libdrm/libdrm2_2.4.125-1ubuntu0.1~24.04.2_amd64.deb",
+    "sha256": "4d3e858dd57be617c49d87c5ddcdb35df744a4f0a559981256ae2ba174718584"
+  },
+  {
+    "package": "libdrm-common",
+    "version": "2.4.125-1ubuntu0.1~24.04.2",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/libd/libdrm/libdrm-common_2.4.125-1ubuntu0.1~24.04.2_all.deb",
+    "sha256": "0b60996bc18fa1545e60a47bb0fe1a7f360ec06fe62ba35fb8d8ba2a54e62166"
+  }
+]

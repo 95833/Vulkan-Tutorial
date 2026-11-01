@@ -1,0 +1,1 @@
+CPU image: /workspace/scratch/78a475aaead6/vulkan_selfstudy/lab/evidence/cpu.ppm

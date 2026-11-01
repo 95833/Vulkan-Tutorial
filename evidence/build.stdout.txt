@@ -1,0 +1,28 @@
+$ cmake --build build --clean-first --parallel 4
+[ 12%] Building CXX object CMakeFiles/cpu_reference.dir/extras/cpu_reference.cpp.o
+[ 12%] Compiling triangle.vert
+[ 18%] Compiling camera.vert
+[ 25%] Compiling vertex.vert
+/workspace/scratch/78a475aaead6/vulkan_selfstudy/lab/shaders/triangle.vert
+/workspace/scratch/78a475aaead6/vulkan_selfstudy/lab/shaders/vertex.vert
+/workspace/scratch/78a475aaead6/vulkan_selfstudy/lab/shaders/camera.vert
+[ 31%] Compiling color.frag
+[ 37%] Compiling texture.vert
+[ 43%] Compiling texture.frag
+/workspace/scratch/78a475aaead6/vulkan_selfstudy/lab/shaders/texture.vert
+/workspace/scratch/78a475aaead6/vulkan_selfstudy/lab/shaders/color.frag
+/workspace/scratch/78a475aaead6/vulkan_selfstudy/lab/shaders/texture.frag
+[ 56%] Compiling mips.frag
+[ 56%] Compiling layers.frag
+/workspace/scratch/78a475aaead6/vulkan_selfstudy/lab/shaders/layers.frag
+/workspace/scratch/78a475aaead6/vulkan_selfstudy/lab/shaders/mips.frag
+[ 56%] Built target lab_shaders
+[ 75%] Building CXX object CMakeFiles/vulkan_lessons.dir/src/main.cpp.o
+[ 75%] Building CXX object CMakeFiles/vulkan_lessons.dir/src/context.cpp.o
+[ 75%] Building CXX object CMakeFiles/vulkan_lessons.dir/src/resources.cpp.o
+[ 81%] Linking CXX executable cpu_reference
+[ 81%] Built target cpu_reference
+[ 87%] Building CXX object CMakeFiles/vulkan_lessons.dir/src/render.cpp.o
+[ 93%] Building CXX object CMakeFiles/vulkan_lessons.dir/src/lessons.cpp.o
+[100%] Linking CXX executable vulkan_lessons
+[100%] Built target vulkan_lessons

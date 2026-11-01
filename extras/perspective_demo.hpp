@@ -1,0 +1,36 @@
+#pragma once
+#include "../src/math.hpp"
+#include <cmath>
+
+// 第8章跟做练习：完整函数曾在隔离副本以distance=2/4实际验证。
+// 主工程没有包含本文件，仍使用make_camera_matrix(shift)基线。
+namespace lab {
+inline CameraUniform make_perspective_demo_matrix() {
+    const float nearPlane = 0.1f;
+    const float farPlane = 10.0f;
+    const float distance = 2.0f;
+    const float s = 1.0f / std::tan(3.1415926535f / 6.0f);
+    const float A = farPlane / (nearPlane - farPlane);
+    const float B = farPlane * nearPlane / (nearPlane - farPlane);
+
+    const std::array<float, 16> P = {
+        s, 0, 0, 0,
+        0, -s, 0, 0,
+        0, 0, A, -1,
+        0, 0, B, 0
+    };
+    const std::array<float, 16> V = {
+        1, 0, 0, 0,
+        0, 1, 0, 0,
+        0, 0, 1, 0,
+        0, 0, -distance, 1
+    };
+    CameraUniform result{};
+    for (int column = 0; column < 4; ++column)
+        for (int row = 0; row < 4; ++row)
+            for (int k = 0; k < 4; ++k)
+                result.view_projection[column * 4 + row] +=
+                    P[k * 4 + row] * V[column * 4 + k];
+    return result;
+}
+} // namespace lab

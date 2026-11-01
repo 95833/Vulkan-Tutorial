@@ -1,0 +1,6 @@
+[ 50%] Built target lab_shaders
+[ 62%] Built target cpu_reference
+[ 68%] Building CXX object CMakeFiles/vulkan_lessons.dir/src/lessons.cpp.o
+[ 75%] Building CXX object CMakeFiles/vulkan_lessons.dir/src/render.cpp.o
+[ 81%] Linking CXX executable vulkan_lessons
+[100%] Built target vulkan_lessons
